@@ -1,0 +1,32 @@
+* {
+    @include prefixer(box-sizing, border-box, webkit moz);
+}
+
+.container {
+    margin: auto;
+    position: relative;
+    padding: {
+        left: 15px;
+        right: 15px;
+    }
+    @media #{$minSmall} {
+        width: 750px;
+    }
+    @media #{$minMedium} {
+        width: 970px;
+    }
+    @media #{$minLarge} {
+        width: 1170px;
+    }
+}
+
+.clearfix {
+    clear: both;
+}
+
+
+.tCenter-phone {
+    @media #{$maxMobail} {
+        text-align: center;
+    }
+}

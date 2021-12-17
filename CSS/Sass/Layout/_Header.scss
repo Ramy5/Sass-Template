@@ -1,0 +1,81 @@
+// Start Header
+
+header {
+    padding: $mainPadding;
+    overflow: hidden;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+    .logo {
+        @media #{$minSmall} {
+            width: 100%;
+            float: none;
+            text-align: center;
+        }
+        @media #{$minMedium} {
+            width: 30%;
+            float: $floatL;
+            text-align: $textL;
+        }
+        h2 {
+            color: $headColor;
+            margin: 0;
+            font-size: 30px;
+        }
+        p {
+            color: $grayColor;
+            margin: {
+                top: 10px;
+                bottom: 0;
+            }
+            font-size: 14px;
+        }
+    }
+    nav {
+        overflow: hidden;
+        background-color: $redColor;
+        @media #{$maxMobail} {
+            display: none;
+            margin-top: 10px;
+        }
+        @media #{$minSmall} {
+            display: block !important;
+            width: 100%;
+            float: none;
+            margin-top: 1em;
+            border-radius: 10px;
+        }
+        @media #{$minMedium} {
+            width: 70%;
+            float: $floatL;
+            margin-top: 0em;
+        }
+        ul {
+            li {
+                font-size: 18px;
+                @media #{$maxMobail} {
+                    display: block;
+                    float: none;
+                    width: 100%;
+                    text-align: $textL;
+                }
+                @media #{$minSmall} {
+                    float: $floatL;
+                    width: 20%;
+                    text-align: center;
+                }
+                a {
+                    padding: 20px 10px;
+                    display: block;
+                    text-decoration: none;
+                    color: #fff;
+                    @include prefixer(transition, all .5s ease-in-out, webkit moz o ms);
+                    &:hover {
+                        color: #ccc;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// End Header

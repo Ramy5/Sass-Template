@@ -1,0 +1,177 @@
+@import "Sass/Helpers/Variables";
+
+$floatL: right;
+$floatR: left;
+
+$textL: right;
+$textR: left;
+
+
+// Start Header
+
+header {
+    .logo {
+        @media #{$minMedium} {
+            float: $floatL;
+            text-align: $textL;
+        }
+        // element was created by js code
+        .class-toggle {
+            @media #{$maxMobail} {
+                position: absolute;
+                top: 6px;
+                left: 20px;
+                right: auto;
+            }
+        }
+    }
+    nav {
+        @media #{$minMedium} {
+            float: $floatL;
+        }
+        ul {
+            li {
+                @media #{$maxMobail} {
+                    text-align: $textL;
+                }
+                @media #{$minSmall} {
+                    float: $floatL;
+                }
+            }
+        }
+    }
+}
+
+// End Header
+
+// Start Slide 
+
+.slide {
+    ul {
+        li {
+            float: $floatL;
+        }
+    }
+}
+
+// End Slide
+
+// Start Our Services
+
+.service {
+    .parent {
+        div {
+            @media #{$minMedium} {
+                float: $floatL; // if would happen any proplem in the future remove this  
+            }
+            h4 {
+                i {
+                    padding-left: 17px;
+                    padding-right: 0;
+                }
+            }
+            a {
+                position: relative;
+                &::after {
+                    content: ">>";
+                    position: absolute;
+                    right: auto;
+                    @media #{$maxMobail} {
+                        left: -60px;
+                        top: 5px;
+                    }
+                    @media #{$minSmall} {
+                        left: -17px;
+                        top: 6px;
+                    }
+                }
+            } 
+        }
+    }
+}
+
+
+// End Our Services
+
+// Start Our Players
+
+.players {
+    .player-parent {
+        div {
+            @media #{$minSmall} {
+                float: $floatL; // if would happen any proplem in the future remove this
+                &:not(:nth-of-type(2), :nth-of-type(4)) {
+                    margin-left: 35px;
+                    margin-right: 0;
+                }
+                &:not(:nth-of-type(3), :nth-of-type(4)) {
+                    margin-bottom: 30px;
+                }
+            }
+            a {
+                position: relative;
+                &::after {
+                    content: ">>";
+                    position: absolute;
+                    right: auto;
+                    @media #{$maxMobail} {
+                        left: -60px;
+                        top: 5px;
+                    }
+                    @media #{$minSmall} {
+                        left: -17px;
+                        top: 6px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// End Our Players
+
+// Start Lorem Ipsum
+
+
+// End Lorem Ipsum
+
+// Start Footer
+
+footer {
+    .all {
+
+        // first div 
+
+        .blog {
+            & > div {              
+                .img {
+                    @media #{$minSmall} {
+                        float: $floatL;
+                    }
+                }
+                .div-for-footer {
+                    @media #{$minSmall} {
+                        float: $floatL;
+                    }
+                }
+            }
+        }
+
+        // Second div 
+
+        // Third div 
+
+    }
+
+    // Start Copy
+
+    .copy {
+        p {
+            @media #{$minSmall} {
+                float: $floatL;
+            }
+        }
+    }
+}
+
+// End Footer

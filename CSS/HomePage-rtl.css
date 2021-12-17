@@ -1,0 +1,114 @@
+@media (min-width: 992px) {
+  header .logo {
+    float: right;
+    text-align: right;
+  }
+}
+@media (max-width: 767px) {
+  header .logo .class-toggle {
+    position: absolute;
+    top: 6px;
+    left: 20px;
+    right: auto;
+  }
+}
+@media (min-width: 992px) {
+  header nav {
+    float: right;
+  }
+}
+@media (max-width: 767px) {
+  header nav ul li {
+    text-align: right;
+  }
+}
+@media (min-width: 768px) {
+  header nav ul li {
+    float: right;
+  }
+}
+
+.slide ul li {
+  float: right;
+}
+
+@media (min-width: 992px) {
+  .service .parent div {
+    float: right;
+  }
+}
+.service .parent div h4 i {
+  padding-left: 17px;
+  padding-right: 0;
+}
+.service .parent div a {
+  position: relative;
+}
+.service .parent div a::after {
+  content: ">>";
+  position: absolute;
+  right: auto;
+}
+@media (max-width: 767px) {
+  .service .parent div a::after {
+    left: -60px;
+    top: 5px;
+  }
+}
+@media (min-width: 768px) {
+  .service .parent div a::after {
+    left: -17px;
+    top: 6px;
+  }
+}
+
+@media (min-width: 768px) {
+  .players .player-parent div {
+    float: right;
+  }
+  .players .player-parent div:not(:nth-of-type(2), :nth-of-type(4)) {
+    margin-left: 35px;
+    margin-right: 0;
+  }
+  .players .player-parent div:not(:nth-of-type(3), :nth-of-type(4)) {
+    margin-bottom: 30px;
+  }
+}
+.players .player-parent div a {
+  position: relative;
+}
+.players .player-parent div a::after {
+  content: ">>";
+  position: absolute;
+  right: auto;
+}
+@media (max-width: 767px) {
+  .players .player-parent div a::after {
+    left: -60px;
+    top: 5px;
+  }
+}
+@media (min-width: 768px) {
+  .players .player-parent div a::after {
+    left: -17px;
+    top: 6px;
+  }
+}
+
+@media (min-width: 768px) {
+  footer .all .blog > div .img {
+    float: right;
+  }
+}
+@media (min-width: 768px) {
+  footer .all .blog > div .div-for-footer {
+    float: right;
+  }
+}
+@media (min-width: 768px) {
+  footer .copy p {
+    float: right;
+  }
+}
+
+/*# sourceMappingURL=HomePage-rtl.css.map */

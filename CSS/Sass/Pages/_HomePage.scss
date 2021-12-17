@@ -1,0 +1,281 @@
+// Start Slide 
+
+.slide {
+    padding: $mainPadding;
+    blockquote {
+        width: 80%;
+        margin: auto;
+        line-height: 1.6;
+        text-align: center;
+        color: $headColor;
+        margin-bottom: 35px;
+        font: {
+            size: 20px;
+            style: italic;
+            weight: 500;
+        };
+        &::before {
+            content: "‘‘";
+            margin-right: 5px; 
+        }
+        &::after {
+            content: ",,";
+            margin-left: 5px;
+        }
+    }
+    .img-slide {
+        overflow: hidden;
+        margin-bottom: 15px;
+        img {
+            width: 100%;
+            height: 400px;
+            @include prefixer(transition, all .7s ease-in-out, webkit moz o ms);
+            &:hover {
+                @include prefixer(transform, scale(1.3), webkit moz o ms);
+            }
+        }
+    }
+    ul {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        li {
+            width: 15px;
+            height: 15px;
+            background-color: rgba($grayColor, .6);
+            float: $floatL;
+            margin: 0 3px;
+            border-radius: 50%;
+            @include prefixer(transition, all .5s ease-in-out, webkit moz o ms);
+            &:hover {
+                border: 3px solid #333;
+                background-color: #fff;
+                cursor: pointer;
+            }
+        }
+        .active {
+            border: 3px solid #333;
+            background-color: #fff;
+            cursor: pointer;
+        }
+    }
+}
+
+// End Slide
+
+// Start Our Services
+
+.service {
+    .parent {
+        padding: $mainPadding;
+        @media #{$minMedium} {
+            display: flex;
+            justify-content: space-between;
+        }
+        div {
+            @media #{$maxMobail} {
+                &:not(:last-of-type) {
+                    margin-bottom: 30px;
+                }
+                background-color: #eee;
+                border: 1px solid #ccc;
+                padding: 20px;
+                @include prefixer(box-shadow, 5px 5px 15px #ccc, webkit moz o ms);
+            }
+            @media #{$minSmall} {
+                &:not(:last-of-type) {
+                    margin-bottom: 25px;
+                }
+            }
+            @media #{$minMedium} {
+                width: calc(95% / 3);
+                float: $floatL; // if would happen any proplem in the future remove this  
+                &:not(:last-of-type) {
+                    margin-bottom: 0;
+                }
+            }
+            h4 {
+                color: $headColor;
+                margin: 0;
+                @media #{$minSmall} {
+                    display: flex;
+                    align-items: center;
+                }
+                i {
+                    font-size: 30px;
+                    padding: {
+                        right: 17px;
+                    };
+                    @media #{$maxMobail} {
+                        display: block;
+                        margin-bottom: 12px;
+                    }
+                }
+            }
+            p {
+                margin: {
+                    bottom: 5px;
+                    top: 8px;
+                }
+                line-height: 1.5;
+                color: $grayColor;
+            }
+            a {
+                text-decoration: none;
+                color: $redColor;
+                position: relative;
+                @media #{$maxMobail} {
+                    right: -10px;
+                }
+                @include prefixer(transition, all .4s ease-in-out, webkit moz o ms);
+                &::after {
+                    content: ">>";
+                    font-size: 10px;
+                    position: absolute;
+                    right: -17px;
+                    top: 6px;
+                }
+                &:hover {
+                    color: #00f;
+                } 
+            }
+        }
+    }
+}
+
+// End Our Services
+
+// Start Our Players
+
+.players {
+    .player-parent {
+        overflow: hidden;
+        padding: $mainPadding;
+        @media #{$minMedium} {
+            display: flex;
+            justify-content: space-between;
+        }
+        div {
+            @media #{$maxMobail} {
+                @include prefixer(box-shadow, 5px 5px 15px #ccc, webkit moz o ms);
+                background-color: #eee;
+                border: 1px solid #ccc;
+                padding: 20px;
+                &:not(:last-of-type) {
+                    margin-bottom: 35px;
+                }
+            }
+            @media #{$minSmall} {
+                width: calc(95% / 2);
+                float: $floatL; // if would happen any proplem in the future remove this
+                &:not(:nth-of-type(2), :nth-of-type(4)) {
+                    margin-right: 35px;
+                }
+                &:not(:nth-of-type(3), :nth-of-type(4)) {
+                    margin-bottom: 30px;
+                }
+            }  
+            @media #{$minMedium} {
+                width: calc(95% / 4);
+                &:not(:nth-of-type(2), :nth-of-type(4)) {
+                    margin-right: 0;
+                }
+                &:not(:nth-of-type(3), :nth-of-type(4)) {
+                    margin-bottom: 0;
+                }
+                &:not(:nth-of-type(1)) {
+                    margin-left: 30px;
+                }
+            }  
+            img {
+                width: 100%;
+                height: 200px;
+                padding: 5px;
+                background-color: #eee;
+                border: 1px solid rgba(#ccc, .6);
+                border-radius: 5px;
+                filter: grayscale(100%);
+                @include prefixer(transition, all .4s ease-in-out, webkit moz o ms);
+                &:hover {
+                    filter: grayscale(0%);
+                }
+            }
+            h5 {
+                margin: {
+                    top: 10px;
+                    bottom: 10px;
+                };
+                color: rgba($grayColor, .8);
+                span {
+                    color: rgba($headColor, .8);
+                }
+            }
+            p {
+                margin: {
+                    top: 10px;
+                    bottom: 10px;
+                };
+                color: $grayColor;
+                line-height: 1.6;
+            }
+            a {
+                text-decoration: none;
+                color: $redColor;
+                position: relative;
+                @media #{$maxMobail} {
+                    right: -10px;
+                }
+                @include prefixer(transition, all .4s ease-in-out, webkit moz o ms);
+                &::after {
+                    content: ">>";
+                    font-size: 10px;
+                    position: absolute;
+                    right: -17px;
+                    top: 6px;
+                }
+                &:hover {
+                    color: #00f;
+                }
+            }
+        }
+    }
+}
+
+// End Our Players
+
+// Start Lorem Ipsum
+
+.lorem {
+    .images {
+        padding: $mainPadding;
+        @media #{$minSmall} {
+            display: flex;
+            justify-content: space-between;
+        }
+        div {
+            @media #{$maxMobail} {
+                &:not(:last-of-type) {
+                    margin-bottom: 30px;
+                }
+            }
+            @media #{$minSmall} {
+                width: calc(95% / 3);
+            }
+            overflow: hidden;
+            img {
+                @include prefixer(transition, all .5s ease-in-out, webkit moz o ms);
+                width: 100%;
+                height: 100%;
+                padding: 5px;
+                background-color: #eee;
+                border: 1px solid rgba(#ccc, .6);
+                border-radius: 5px;
+                &:hover {
+                    @include prefixer(transform, scale(1.3) rotate(-5deg), webkit moz o ms);
+                }
+            }
+        }
+    }
+}
+
+// End Lorem Ipsum

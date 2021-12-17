@@ -1,0 +1,188 @@
+// Start Footer
+
+footer {
+    background-color: rgba($grayColor, .3);
+    .all {
+        padding: $mainPadding;
+        @media #{$minMedium} {
+            display: flex;
+            justify-content: space-between;      
+        }
+
+        // first div 
+
+        .blog {
+            @media #{$minMedium} {
+                width: 50%;
+            }
+            h4 {
+                color: $headColor;
+            }
+            & > div {
+                @media #{$minSmall} {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+                padding-bottom: 25px;
+                .img {
+                    overflow: hidden;
+                    @media #{$maxMobail} {
+                        width: 100%;
+                        float: none;
+                        margin-bottom: 10px;
+                    }
+                    @media #{$minSmall} {
+                        width: 30%;
+                        float: $floatL;
+                        margin-bottom: 0;
+                    }
+                    img {
+                        padding: 3px;
+                        background-color: #fff;
+                        @include prefixer(transition, all .4s ease-in-out, webkit moz o ms);
+                        @media #{$maxMobail} {
+                            width: 75%;
+                            height: 200px;
+                            &:hover {
+                                transform: none;
+                            }
+                        }
+                        @media #{$minSmall} {
+                            width: 100%;
+                            height: 120px;
+                            &:hover {
+                                @include prefixer(transform, scale(1.3) rotate(-5deg), webkit moz o ms);
+                            }
+                        }
+                    }
+                }
+                .div-for-footer {
+                    @media #{$maxMobail} {
+                        float: none;
+                        width: 100%;
+                        padding: 0 50px;
+                    }
+                    @media #{$minSmall} {
+                        float: $floatL;
+                        width: 65%;
+                        padding: 0;
+                    }
+                    h5 {
+                        margin: {
+                            top: 5px;
+                            bottom: 10px;
+                        };
+                        color: $redColor;
+                    }
+                    p {
+                        line-height: 1.5;
+                        margin: 0;
+                        color: $grayColor;
+                    }
+                }
+            }
+        }
+
+        // Second div 
+
+        .details {
+            @media #{$maxMobail} {
+                width: 100%;
+                box-shadow: 5px 5px 15px #848282;
+                background-color: #dbdbdb;
+                border: 1px solid #d5cfcf;
+                padding: 10px 5px;
+                margin-bottom: 40px;
+            }
+            @media #{$minSmall} {
+                width: 40%;
+                display: inline-block;
+                margin-right: 25px;
+                margin-bottom: 0;
+            }
+            @media #{$minMedium} {
+                width: 20%;
+                margin-right: 0;
+            }
+            h4 {
+                color: $headColor;
+            }
+            p {
+                line-height: 2.4;
+                margin: 0;
+                color: $grayColor;
+                @media #{$minSmall} {
+                    line-height: 2.2;
+                }
+                span {
+                    color: $headColor;
+                }
+                a {
+                    color: $redColor;
+                    text-decoration: none;
+                    @include prefixer(transition, all .4s ease-in-out, webkit moz o ms);
+                    &:hover {
+                        color: #00f;
+                    }
+                }
+            }
+        }
+
+        // Third div 
+
+        .contact {
+            @media #{$minSmall} {
+                width: 55%;
+                display: inline-block;
+            }
+            @media #{$minMedium} {
+                width: 20%;
+            }            
+            h4 {
+                color: $headColor;
+            }
+            form {
+                input:not(:last-of-type),
+                textarea {
+                    width: 100%;
+                    margin-bottom: 10px;
+                    padding: 10px 3%;
+                    border: none;
+                    outline: none;
+                    border-radius: 5px;
+                    &:focus {
+                        color: $headColor;
+                        caret-color: $redColor;
+                    }
+                }
+                textarea {
+                    height: 110px;
+                }
+            }
+        }
+
+        
+    }
+
+    // Start Copy
+
+    .copy {
+        @media #{$minSmall} {
+            display: flex !important;
+            justify-content: space-between;
+            align-items: center;
+        }
+        p {
+            color: $grayColor;
+            @media #{$maxMobail} {
+                float: none;
+            }
+            @media #{$minSmall} {
+                float: $floatL;
+            }
+        }
+    }
+}
+
+// End Footer
